@@ -39,6 +39,7 @@
 package main
 
 import (
+	"context"
 	"crypto/sha256"
 	"encoding/hex"
 	"flag"
@@ -46,13 +47,12 @@ import (
 	"io"
 	"log"
 	"net"
-	"net/http"
-	"net/http/cookiejar"
 	"os"
 	"sync"
 	"time"
 
 	"github.com/oisee/open-rfc-go/internal/rfcserver"
+	"github.com/oisee/open-rfc-go/pkg/adtbridge"
 )
 
 func main() {
@@ -90,76 +90,27 @@ func main() {
 	// cookie jar, and a jar shared between two clients would share an ADT
 	// context between them. Checked once at startup so a bad backend fails now
 	// rather than on somebody's first request.
-	if _, err := rfcserver.ADTRestHandler(target, nil); err != nil {
-		log.Fatalf("adt-rfc-bridge: %v", err)
-	}
-
 	listener, err := net.Listen("tcp", *listen)
 	if err != nil {
 		log.Fatalf("adt-rfc-bridge: %v", err)
 	}
 	defer listener.Close()
+	options := adtbridge.Options{
+		Backend: target,
+		Timeout: *timeout,
+		Verbose: *verbose,
+		Log:     func(format string, args ...any) { log.Printf("adt-rfc-bridge: "+format, args...) },
+		Dump:    dumper(),
+	}
+	if err := adtbridge.Check(options); err != nil {
+		log.Fatalf("adt-rfc-bridge: %v", err)
+	}
 	log.Printf("adt-rfc-bridge: %s -> %s", *listen, target.Describe())
 	log.Printf("adt-rfc-bridge: point an ABAP project at this host, and at the instance this port belongs to")
-	log.Printf("adt-rfc-bridge: the RFC logon is NOT checked — every caller reaches the backend as %s", targetUser(target))
-
-	for {
-		conn, err := listener.Accept()
-		if err != nil {
-			log.Printf("adt-rfc-bridge: accept: %v", err)
-			return
-		}
-		go func() {
-			peer := conn.RemoteAddr().String()
-			log.Printf("adt-rfc-bridge: %s connected", peer)
-			// the jar is made here so the timeout can be set alongside it:
-			// both belong to this one conversation
-			jar, err := cookiejar.New(nil)
-			if err != nil {
-				log.Printf("adt-rfc-bridge: %s: %v", peer, err)
-				conn.Close()
-				return
-			}
-			client := &http.Client{Timeout: *timeout, Jar: jar}
-			if tr, terr := target.Transport(); terr != nil {
-				log.Printf("adt-rfc-bridge: %s: %v", peer, terr)
-				conn.Close()
-				return
-			} else if tr != nil {
-				client.Transport = tr
-			}
-			handler, err := rfcserver.ADTRestHandler(target, client)
-			if err != nil {
-				log.Printf("adt-rfc-bridge: %s: %v", peer, err)
-				conn.Close()
-				return
-			}
-			dispatcher := rfcserver.NewDispatcher()
-			dispatcher.Handle("SADT_REST_RFC_ENDPOINT", handler)
-			// what Eclipse asks before its first call: the function's
-			// interface and the dictionary of the types it names
-			dispatcher.Handle("RFC_GET_FUNCTION_INTERFACE", rfcserver.FunctionInterfaceHandler())
-			dispatcher.Handle("DDIF_FIELDINFO_GET", rfcserver.FieldInfoHandler())
-			dispatcher.Handle("RFC_GET_STRUCTURE_DEFINITION", rfcserver.StructureDefinitionHandler())
-			dispatcher.Identity = target.LogonIdentity()
-			logf := func(string) {}
-			if *verbose {
-				logf = func(s string) { log.Printf("adt-rfc-bridge: %s: %s", peer, s) }
-			}
-			rfcserver.ServeConscious(conn, dispatcher, logf, dumper(peer))
-			log.Printf("adt-rfc-bridge: %s gone", peer)
-		}()
+	log.Printf("adt-rfc-bridge: the RFC logon is NOT checked — every caller reaches the backend as %s", adtbridge.User(target))
+	if err := adtbridge.Serve(context.Background(), listener, options); err != nil {
+		log.Printf("adt-rfc-bridge: %v", err)
 	}
-}
-
-// targetUser names who the backend will think is calling, for the warning at
-// startup. A run that authenticates and one that does not should not look the
-// same in a log.
-func targetUser(b rfcserver.Backend) string {
-	if b.User == "" {
-		return "an anonymous client"
-	}
-	return b.User
 }
 
 // version is set at build time by scripts/build-bridge.sh, which derives it
@@ -199,12 +150,12 @@ func ownBuildStamp() string {
 // appends one JSON line per frame, hex-encoded, so a session can be diffed
 // against a capture. The bytes carry a logon and a session, so it is off
 // unless asked and writes only under a path the operator chose.
-func dumper(peer string) func(string, []byte) {
+func dumper() func(peer, dir string, frame []byte) {
 	path := os.Getenv("STG_DUMP")
 	if path == "" {
 		return nil
 	}
-	return func(dir string, frame []byte) {
+	return func(peer, dir string, frame []byte) {
 		dumpMu.Lock()
 		defer dumpMu.Unlock()
 		f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o600)
