@@ -53,9 +53,9 @@ type TagLen struct {
 // InitialLogonRequestInput is the semantic input to the initial logon request.
 // PartnerSystem, FunctionName, and KernelRelease default when empty.
 type InitialLogonRequestInput struct {
-	Client               string
-	User                 string
-	Password             string
+	Client   string
+	User     string
+	Password string
 	// Ticket, when set, logs on with an SAP logon ticket instead of a password:
 	// the credential field becomes TagTicket (0x0670) carrying the ticket's
 	// base64 text as UTF-16LE, and the password field is omitted. Give it the

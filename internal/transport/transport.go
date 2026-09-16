@@ -21,8 +21,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/oisee/open-rfc-go/ni"
 	"github.com/oisee/open-rfc-go/internal/saprouter"
+	"github.com/oisee/open-rfc-go/ni"
 )
 
 // ErrClosed reports a read or write on a connection the peer has closed.
