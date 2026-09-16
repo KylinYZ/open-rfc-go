@@ -33,11 +33,6 @@
     },
     {
       "file": "docs/discoveries/0001-live-type3-server.md",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "docs/discoveries/0001-live-type3-server.md",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -58,11 +53,6 @@
     },
     {
       "file": "docs/discoveries/0002-wire-constants.md",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "docs/discoveries/0002-wire-constants.md",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -83,11 +73,6 @@
     },
     {
       "file": "cmd/rfc-viewer/inspector.html",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "cmd/rfc-viewer/inspector.html",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -108,11 +93,6 @@
     },
     {
       "file": "internal/fastser/fastser_test.go",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/fastser/fastser_test.go",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -133,11 +113,6 @@
     },
     {
       "file": "internal/rfcserver/replay.go",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/rfcserver/replay.go",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -158,11 +133,6 @@
     },
     {
       "file": "internal/rfcserver/s4_envelope.go",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/rfcserver/s4_envelope.go",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -183,11 +153,6 @@
     },
     {
       "file": "internal/rfcserver/serve_smart.go",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/rfcserver/serve_smart.go",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -208,11 +173,6 @@
     },
     {
       "file": "internal/rfcserver/serve_ticketcatch_accept.go",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/rfcserver/serve_ticketcatch_accept.go",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -233,11 +193,6 @@
     },
     {
       "file": "reports/debugger-over-rfc.md",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "reports/debugger-over-rfc.md",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -258,11 +213,6 @@
     },
     {
       "file": "reports/xbp-adaptive-scheduler.md",
-      "value": "192.0.2.30",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "reports/xbp-adaptive-scheduler.md",
       "value": "172.17.0.17",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
@@ -279,11 +229,6 @@
     {
       "file": "internal/metadata/recursive_test.go",
       "value": "examplesrv_A4H_00",
-      "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
-    },
-    {
-      "file": "internal/metadata/recursive_test.go",
-      "value": "192.0.2.30",
       "reason": "Уже в публичном main с прежних коммитов. Решение Alice, 2026-09-14: оставить. examplesrv — штатное имя эплайенса ABAP Platform Developer Edition, опубликовано самим SAP; 192.0.2.30 — docker-мост, нероутируемый; CLAUDE — песочный юзер. Форс-пуш публичной истории дороже, чем эти три."
     },
     {
@@ -302,34 +247,19 @@
       "reason": "Не адрес, а имя тестовой функции: TestGrammarNonzeroEmbeddedCallStatusFailsClosed — 46 букв и цифр, поэтому попадает под B64_RUN (40+ символов класса base64). Раскодированное как base64, оно даёт байты, среди которых ac 15 a8 a5. В файле нет ни точечной записи, ни этих байт: проверено декодированием всех литералов. Совпадение воспроизводится из одного идентификатора."
     },
     {
-      "file": "cmd/orfc-viewer/inspector.html",
-      "value": "192.0.2.30",
-      "reason": "Docker bridge address (172.17.x = the default docker0 network of the sandbox container), ephemeral and not a routable host. Already public in origin/main; the merge pulls the file in, it introduces nothing new."
-    },
-    {
-      "file": "internal/rfcserver/serve_typet.go",
-      "value": "192.0.2.30",
-      "reason": "The same docker-bridge address, packed inside a captured logon-template constant. Unchanged from origin/main — this branch touched only two unrelated signature lines — so it is already public and the merge introduces nothing new."
-    },
-    {
       "file": "internal/fastser/fields_test.go",
       "value": "172.22.137.219",
       "reason": "Not an address: the base64 of the test name TestRawWidthCountsBytesAndCharWidthCountsUni decodes to bytes containing ac 16 89 db. A long CamelCase identifier that the base64-run heuristic reads as packed bytes. Already public in origin/main."
     },
     {
-      "file": "cmd/orfc-lab/main.go",
-      "value": "198.51.100.13",
-      "reason": "Already public in origin/main history (commit 7058e343, before main scrubbed this flag default to a required value). Merging main brings its history onto this branch and exposes nothing new; current main no longer carries it."
+      "file": "cmd/rfc-lab/main.go",
+      "value": "00000000-0000-4000-8000-000000000000",
+      "reason": "The nil documentation UUID used to mask a captured session GUID during the 2026-09-16 history rewrite. It identifies nothing; the scanner matches UUID shape, not meaning."
     },
     {
-      "file": "docs/discoveries/logon-credential-block.md",
-      "value": "developer001",
-      "reason": "Already public in origin/main (commit 7058e343). Brought onto the branch by merging main; no new exposure."
-    },
-    {
-      "file": "docs/discoveries/logon-credential-block.md",
-      "value": "Developer01",
-      "reason": "Already public in origin/main (commit 7058e343). Brought onto the branch by merging main; no new exposure."
+      "file": "rfc-sniffer",
+      "value": "172.26.118.35",
+      "reason": "Not an address: four bytes inside a committed binary that the base64 heuristic reads as packed. A compiled artifact produces such sequences by chance."
     }
   ]
 }
