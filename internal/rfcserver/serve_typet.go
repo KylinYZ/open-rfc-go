@@ -106,14 +106,14 @@ func ServeTypeT(conn net.Conn, d *Dispatcher, logf func(string), dump func(dir s
 			fn := req.FunctionName
 			var respCUT []byte
 			var werr error
-			if resp, excKey := d.Invoke(ctx, req); excKey != "" {
+			if resp, excKey, _ := d.Invoke(ctx, req); excKey != "" {
 				respCUT, werr = EncodeCutFunctionExceptionResponse(excKey)
 				log(fmt.Sprintf("CALL: %s -> exception %s", fn, excKey))
 			} else {
 				// A trusted-RFC reply carries no session GUID (the real reply has
 				// no 0x0514 field), so pass nil — echoing one triggers the client's
 				// "RFC GUID inconsistency" check.
-				respCUT, werr = EncodeCutFunctionResponseS4(resp.Exports, resp.Tables, nil, req.RequestedOutputs)
+				respCUT, werr = EncodeCutFunctionResponseS4(resp.Exports, resp.Tables, nil, nil, req.RequestedOutputs)
 				log(fmt.Sprintf("CALL: %s -> generated (%d exports, %d tables)", fn, len(resp.Exports), len(resp.Tables)))
 			}
 			if werr != nil {

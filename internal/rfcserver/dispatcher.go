@@ -29,6 +29,31 @@ const SystemFailureKey = "SYSTEM_FAILURE"
 type Response struct {
 	Exports []cpic.NamedValue
 	Tables  []Table
+	// XrfcParameters are recursive parameters, each already encoded as xRFC
+	// XML. A function whose exports are structures of structures — ADT's REST
+	// endpoint is one — answers here and not in Exports.
+	XrfcParameters []cpic.NamedValue
+	// Compact is a recursive parameter to be sent as SAP Binary XML in the
+	// 0x4000 family, the way SADT_REST_RFC_ENDPOINT answers Eclipse. The
+	// document is given plain; the encoder compresses it. CompactName is the
+	// parameter's name, for the 0x0205 echo.
+	Compact     []byte
+	CompactName string
+
+	// Outputs are the scalar and xRFC exports of an Eclipse answer, in the
+	// order the system returns them — which is the function's parameter order,
+	// not the order the client asked for them, and interleaves the two kinds
+	// (a DDIF answer is DFIES_WA, then the LINES_DESCR xRFC, then X030L_WA).
+	// The Eclipse encoder uses this list; the S/4 path uses Exports and
+	// XrfcParameters.
+	Outputs []Output
+}
+
+// Output is one named export of an Eclipse answer.
+type Output struct {
+	Name  string
+	XML   bool // an xRFC recursive export (3c02 chunks) rather than a scalar
+	Value []byte
 }
 
 // Exception is a handler error that raises a declared ABAP exception with Key.
@@ -45,6 +70,11 @@ type Handler func(ctx context.Context, req Request) (Response, error)
 type Dispatcher struct {
 	mu       sync.RWMutex
 	handlers map[string]Handler
+
+	// Identity is what the logon answer says this server is. Eclipse is
+	// configured with a system id before it connects and compares notes; see
+	// LogonIdentity. Zero means "leave the template alone".
+	Identity LogonIdentity
 }
 
 // NewDispatcher returns an empty dispatcher.
@@ -87,25 +117,32 @@ func (d *Dispatcher) Dispatch(ctx context.Context, requestPayload []byte) ([]byt
 		}
 		return EncodeCutFunctionExceptionResponse(SystemFailureKey)
 	}
-	return EncodeCutFunctionResponse(resp.Exports, resp.Tables)
+	return EncodeCutFunctionResponse(resp.Exports, resp.Tables, resp.XrfcParameters)
 }
 
 // Invoke runs the handler for a decoded request and returns the structured
 // Response, or a non-empty exception key if the function is unknown or the
 // handler failed. It lets a server encode the reply itself (e.g. with the S4
 // envelope) instead of taking Dispatch's pre-encoded classic bytes.
-func (d *Dispatcher) Invoke(ctx context.Context, req Request) (Response, string) {
+//
+// The third return is the handler's own error, which the caller logs. It is
+// separate from the key because the key is what goes on the wire — SYSTEM_
+// FAILURE says only "something" to the client and, until this returned the
+// cause as well, it said only that to us too. A bridge whose backend refuses a
+// request, whose parameters fail to decode and whose response fails to encode
+// reported the same three words for all three.
+func (d *Dispatcher) Invoke(ctx context.Context, req Request) (Response, string, error) {
 	h, ok := d.handler(req.FunctionName)
 	if !ok {
-		return Response{}, UnknownFunctionKey
+		return Response{}, UnknownFunctionKey, nil
 	}
 	resp, err := h(ctx, req)
 	if err != nil {
 		var exc *Exception
 		if errors.As(err, &exc) && exc.Key != "" {
-			return Response{}, exc.Key
+			return Response{}, exc.Key, err
 		}
-		return Response{}, SystemFailureKey
+		return Response{}, SystemFailureKey, err
 	}
-	return resp, ""
+	return resp, "", nil
 }

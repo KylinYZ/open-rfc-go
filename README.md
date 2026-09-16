@@ -14,6 +14,21 @@ A pure-Go, **SDK-free** implementation of SAP classic synchronous RFC — client
 serializer writes it. We took it off the wire — see
 [serializer selection](docs/discoveries/serializer-selection.md).)*
 
+> ## 🎉 Eclipse ABAP Development Tools, over RFC — `cmd/adt-rfc-bridge`
+>
+> **2026-09-16 — a stock Eclipse ABAP project logs on, browses the repository
+> and opens a source through a Go gateway, over RFC, and does not know it is not
+> a SAP system.** An Eclipse **Custom Application Server** project never opens an
+> HTTP port: it logs on over RFC on the gateway port and tunnels every ADT
+> request inside one RFC call (`SADT_REST_RFC_ENDPOINT`). `cmd/adt-rfc-bridge`
+> terminates that RFC conversation and forwards the HTTP exchange inside it to
+> any `--backend` — a real system, or the sibling
+> [open-steamgate](https://github.com/oisee/open-steamgate)'s offline ADT
+> façade. Measured end to end: logon, discovery, identity, the tree expanded, a
+> source opened, unit-test metadata and check runs — all answered, zero SAP
+> libraries. The protocol facts are written down in
+> [open-steamgate's `docs/adt-over-rfc.md`](https://github.com/oisee/open-steamgate/blob/main/docs/adt-over-rfc.md).
+
 > ## 🎉 The fast serializer is decoded — records, types, and the compression
 >
 > **2026-08-23 — SAP's fast RFC serialization is no longer opaque.** The record

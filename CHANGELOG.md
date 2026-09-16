@@ -5,6 +5,21 @@ against the live A4H test system (SAP_BASIS 793). Detailed wire findings live in
 [`docs/discoveries/`](docs/discoveries/); the porting plan is in
 [`docs/porting-plan.md`](docs/porting-plan.md).
 
+## Unreleased
+
+- `cmd/adt-rfc-bridge`: a stock Eclipse "Custom Application Server" project
+  reaches an HTTP backend over RFC. It terminates the RFC/CPIC conversation,
+  unwraps the ADT HTTP request tunnelled in `SADT_REST_RFC_ENDPOINT`, forwards
+  it to `--backend`, and wraps the answer. New package `internal/bxml` (SAP
+  Binary XML), the dictionary bootstrap handlers, the CSRF dance, and an
+  `https` backend by named certificate. See open-steamgate `docs/adt-over-rfc.md`.
+
+- `ni`, `wire` and `sniffer` are public packages now, moved out of `internal/`.
+  They are the NI framing, the bounds-checked byte reader/writer and the
+  framing-aware proxy, and a second protocol on the same transport — DIAG,
+  in open-diag-go-pro — wants all three. Import paths change from
+  `internal/ni` to `ni`, and likewise for the other two; nothing else does.
+
 ## v0.2.0 — the fast serializer, decoded — 2026-08-23
 
 SAP's fast RFC serialization stops being opaque. What was a wall of bytes a day
@@ -163,7 +178,6 @@ a fix the others miss.
   blocked the server track
 - classic is complete for the synchronous path, re-verified live: scalar
   `STRING` and `XSTRING`, and deep structures carrying both
-
 ## Client — ADT REST over classic RFC — 2026-08-21
 
 A real ADT REST request now travels through the classic-RFC tunnel:
