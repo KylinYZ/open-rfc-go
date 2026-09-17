@@ -79,6 +79,11 @@ func Open(ctx context.Context, d Destination) (*Client, error) {
 	if d.Host == "" || d.User == "" {
 		return nil, fmt.Errorf("%w: Host and User are required", ErrProtocol)
 	}
+	language, err := normalizeLogonLanguage(d.Language)
+	if err != nil {
+		return nil, fmt.Errorf("%w: %v", ErrProtocol, err)
+	}
+	d.Language = language
 	openSession := func(ctx context.Context) (*lifecycle.Managed, error) {
 		sopts := client.SessionOptions{
 			Host:                     d.Host,

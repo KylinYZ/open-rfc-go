@@ -196,7 +196,7 @@ func failStructure(rule, msg string, fields []StructuralField) error {
 
 var (
 	digits3   = regexp.MustCompile(`^\d{3}$`)
-	oneLetter = regexp.MustCompile(`^[A-Za-z]$`)
+	oneLetter = regexp.MustCompile(`^[A-Za-z0-9]$`)
 	asciiRE   = regexp.MustCompile(`^[\x20-\x7e]*$`)
 )
 
