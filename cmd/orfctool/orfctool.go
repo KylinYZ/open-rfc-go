@@ -138,7 +138,7 @@ func OpenWithTimeout(ctx context.Context, name string, timeout time.Duration) (*
 		User:             sys.User,
 		Password:         sys.Password,
 		Ticket:           sys.Ticket,
-		Language:         string([]rune(strings.ToUpper(lang))[0:1]),
+		Language:         lang,
 	})
 	if err != nil {
 		return nil, Options{}, err
