@@ -7,8 +7,8 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 func int4(v int32) []byte {

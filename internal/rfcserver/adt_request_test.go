@@ -5,9 +5,9 @@ package rfcserver
 import (
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/xrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/xrfc"
 )
 
 // The name of an xRFC parameter is not on the wire.

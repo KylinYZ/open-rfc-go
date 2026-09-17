@@ -24,10 +24,10 @@ import (
 	"strings"
 	"unicode/utf16"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
-	"github.com/oisee/open-rfc-go/internal/value"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/value"
 )
 
 const (

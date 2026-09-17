@@ -13,8 +13,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 // ErrFunctionInterface reports a malformed RFC_GET_FUNCTION_INTERFACE response.

@@ -23,8 +23,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/gateway"
-	"github.com/oisee/open-rfc-go/ni"
+	"github.com/KylinYZ/open-rfc-go/internal/gateway"
+	"github.com/KylinYZ/open-rfc-go/ni"
 )
 
 // Direction is which way an observed frame travels.

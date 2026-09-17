@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/metadata"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/metadata"
 )
 
 func sfield(name, exid string, pos, uclen, dec int) metadata.MetadataField {

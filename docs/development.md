@@ -11,7 +11,7 @@ check assumes the sibling path.
 
 ```sh
 git clone https://github.com/marianfoo/open-rfc      ~/dev/open-rfc
-git clone https://github.com/oisee/open-rfc-go       ~/dev/open-rfc-go
+git clone https://github.com/KylinYZ/open-rfc-go       ~/dev/open-rfc-go
 cd ~/dev/open-rfc-go && go build ./...
 ```
 

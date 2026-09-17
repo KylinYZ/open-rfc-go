@@ -8,10 +8,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/metadata"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
-	"github.com/oisee/open-rfc-go/internal/xrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/metadata"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/xrfc"
 )
 
 // The synthetic type closure below mirrors the live shape that motivated the

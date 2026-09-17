@@ -53,13 +53,13 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/lifecycle"
-	"github.com/oisee/open-rfc-go/internal/metadata"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
-	"github.com/oisee/open-rfc-go/internal/structure"
-	"github.com/oisee/open-rfc-go/internal/xrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/lifecycle"
+	"github.com/KylinYZ/open-rfc-go/internal/metadata"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/structure"
+	"github.com/KylinYZ/open-rfc-go/internal/xrfc"
 )
 
 // maxGraphSchemaDepth bounds nested JSON-Schema / coercion recursion. The

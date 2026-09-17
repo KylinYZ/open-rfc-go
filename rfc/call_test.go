@@ -7,9 +7,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/metadata"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/metadata"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
 )
 
 func param(name, class, exid, table string, length int32) classicrfc.FunintParameter {

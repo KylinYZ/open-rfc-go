@@ -4,7 +4,7 @@ package rfc
 import (
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
 )
 
 // TestScalarTypeDelegation round-trips scalar types that the fast path does not

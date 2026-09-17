@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/metadata"
+	"github.com/KylinYZ/open-rfc-go/internal/metadata"
 )
 
 func rcGraph() metadata.Graph {

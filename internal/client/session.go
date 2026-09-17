@@ -26,13 +26,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/appc"
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/gateway"
-	"github.com/oisee/open-rfc-go/internal/rfcerr"
-	"github.com/oisee/open-rfc-go/internal/saprouter"
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/appc"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/gateway"
+	"github.com/KylinYZ/open-rfc-go/internal/rfcerr"
+	"github.com/KylinYZ/open-rfc-go/internal/saprouter"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // ErrSession reports a session-level protocol or state error.

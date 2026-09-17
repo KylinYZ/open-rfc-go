@@ -13,7 +13,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 // UnknownFunctionKey is the exception key returned when no handler is registered

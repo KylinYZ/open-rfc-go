@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // The handshake constants below were distilled from live A4H captures: the

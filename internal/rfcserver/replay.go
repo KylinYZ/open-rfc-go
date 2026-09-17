@@ -12,7 +12,7 @@ import (
 	"os"
 	"sort"
 
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // ReplayStep is one scripted frame from a capture: a direction and the NI

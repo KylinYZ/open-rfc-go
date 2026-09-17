@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
 )
 
 // ToolSchema is an MCP-tool-shaped description of an RFC function module: a name,

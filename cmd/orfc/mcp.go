@@ -26,8 +26,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/oisee/open-rfc-go/cmd/orfctool"
-	"github.com/oisee/open-rfc-go/rfc"
+	"github.com/KylinYZ/open-rfc-go/cmd/orfctool"
+	"github.com/KylinYZ/open-rfc-go/rfc"
 )
 
 const protocolVersion = "2024-11-05"

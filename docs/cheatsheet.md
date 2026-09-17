@@ -201,7 +201,7 @@ accept and reject identically. Port as `uint64` + explicit bound.
 ## Go API — what exists
 
 ```go
-import "github.com/oisee/open-rfc-go/internal/ni"   // internal: not importable
+import "github.com/KylinYZ/open-rfc-go/internal/ni"   // internal: not importable
 ```
 
 | Symbol | Signature |

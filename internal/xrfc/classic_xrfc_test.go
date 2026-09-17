@@ -16,7 +16,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
 )
 
 func hexb(t *testing.T, s string) []byte {

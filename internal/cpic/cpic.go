@@ -27,7 +27,7 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/oisee/open-rfc-go/internal/rfcpro"
+	"github.com/KylinYZ/open-rfc-go/internal/rfcpro"
 )
 
 const (

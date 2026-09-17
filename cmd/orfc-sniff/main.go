@@ -18,7 +18,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/oisee/open-rfc-go/internal/sniffer"
+	"github.com/KylinYZ/open-rfc-go/internal/sniffer"
 )
 
 func main() {

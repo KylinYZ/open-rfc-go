@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 // decodeS4Vector loads a live S/4HANA classic-serialization response CUT (trimmed

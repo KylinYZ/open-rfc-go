@@ -34,9 +34,9 @@ import (
 	"os"
 	"sync"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/rfcserver"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/rfcserver"
 )
 
 // ztstDispatcher answers the FMs that Z_CALL_RFC drives over its destination

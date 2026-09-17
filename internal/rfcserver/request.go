@@ -21,8 +21,8 @@ import (
 	"strings"
 	"unicode/utf16"
 
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/xrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/xrfc"
 )
 
 // ErrRequest reports a malformed inbound CUT request.

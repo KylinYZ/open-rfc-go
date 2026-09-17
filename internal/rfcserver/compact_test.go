@@ -16,10 +16,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/appc"
-	"github.com/oisee/open-rfc-go/internal/bxml"
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/appc"
+	"github.com/KylinYZ/open-rfc-go/internal/bxml"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 func discoveryRequest() *bxml.Element {

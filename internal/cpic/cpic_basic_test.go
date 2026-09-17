@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/scramble"
+	"github.com/KylinYZ/open-rfc-go/internal/scramble"
 )
 
 func fld(tag Tag, value []byte) Field { return Field{Tag: uint16(tag), Value: value} }

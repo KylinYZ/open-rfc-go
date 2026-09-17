@@ -14,7 +14,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
 )
 
 func fld(name, exid string, pos, offset, intlen, decimals int32) rfctypes.RfcStructureField {

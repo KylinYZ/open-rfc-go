@@ -25,7 +25,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/oisee/open-rfc-go/wire"
+	"github.com/KylinYZ/open-rfc-go/wire"
 )
 
 const (

@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/bxml"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/bxml"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 // Every call of a real Eclipse session, through this server's decoder and,

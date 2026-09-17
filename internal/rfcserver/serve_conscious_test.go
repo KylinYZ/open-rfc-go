@@ -6,8 +6,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 // TestConsciousDispatchEcho drives the conscious dispatch path end to end without

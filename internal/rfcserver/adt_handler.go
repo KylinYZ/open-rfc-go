@@ -13,10 +13,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/oisee/open-rfc-go/internal/bxml"
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/xrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/bxml"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/xrfc"
 )
 
 // ADT over RFC, delegated to whatever speaks HTTP.

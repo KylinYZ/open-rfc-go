@@ -7,8 +7,8 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/oisee/open-rfc-go/internal/lifecycle"
-	"github.com/oisee/open-rfc-go/internal/pool"
+	"github.com/KylinYZ/open-rfc-go/internal/lifecycle"
+	"github.com/KylinYZ/open-rfc-go/internal/pool"
 )
 
 // Session is a client pinned to one connection, so consecutive calls run in the

@@ -27,10 +27,10 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
-	"github.com/oisee/open-rfc-go/internal/structure"
-	"github.com/oisee/open-rfc-go/internal/value"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/internal/structure"
+	"github.com/KylinYZ/open-rfc-go/internal/value"
 )
 
 var (

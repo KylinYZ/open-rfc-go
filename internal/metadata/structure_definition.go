@@ -13,10 +13,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/rfctypes"
-	"github.com/oisee/open-rfc-go/wire"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/rfctypes"
+	"github.com/KylinYZ/open-rfc-go/wire"
 )
 
 // RfcFieldsUnicodeRowLength is the stable prefix width of a Unicode RFC_FIELDS

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // ServeConscious answers a live SM59 type-3 client by GENERATING each response

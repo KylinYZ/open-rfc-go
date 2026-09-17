@@ -28,9 +28,9 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/oisee/open-rfc-go/internal/bridge"
-	"github.com/oisee/open-rfc-go/internal/rfcserver"
-	"github.com/oisee/open-rfc-go/internal/sniffer"
+	"github.com/KylinYZ/open-rfc-go/internal/bridge"
+	"github.com/KylinYZ/open-rfc-go/internal/rfcserver"
+	"github.com/KylinYZ/open-rfc-go/internal/sniffer"
 )
 
 func main() {

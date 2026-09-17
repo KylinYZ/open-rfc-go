@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // ServeTypeT impersonates the SAP gateway *and* the registered server for a

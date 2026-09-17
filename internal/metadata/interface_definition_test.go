@@ -14,8 +14,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/classicrfc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/classicrfc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 func u16m(s string) []byte { return classicMustChar(s, len([]rune(s))) }

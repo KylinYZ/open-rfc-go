@@ -14,7 +14,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/oisee/open-rfc-go/ni"
+	"github.com/KylinYZ/open-rfc-go/ni"
 )
 
 func TestSendReceiveRoundTrip(t *testing.T) {

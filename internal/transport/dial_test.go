@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/saprouter"
+	"github.com/KylinYZ/open-rfc-go/internal/saprouter"
 )
 
 func writeNIFrame(w io.Writer, payload []byte) error {

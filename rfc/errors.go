@@ -8,10 +8,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/oisee/open-rfc-go/internal/lifecycle"
-	"github.com/oisee/open-rfc-go/internal/pool"
-	"github.com/oisee/open-rfc-go/internal/rfcerr"
-	"github.com/oisee/open-rfc-go/internal/transport"
+	"github.com/KylinYZ/open-rfc-go/internal/lifecycle"
+	"github.com/KylinYZ/open-rfc-go/internal/pool"
+	"github.com/KylinYZ/open-rfc-go/internal/rfcerr"
+	"github.com/KylinYZ/open-rfc-go/internal/transport"
 )
 
 // The error taxonomy for the public package. Wrap-and-match with errors.Is;

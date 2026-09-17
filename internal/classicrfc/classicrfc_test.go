@@ -16,7 +16,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
 )
 
 func u16(s string) []byte {

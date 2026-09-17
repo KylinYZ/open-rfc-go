@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/oisee/open-rfc-go/cmd/orfctool"
-	"github.com/oisee/open-rfc-go/rfc"
+	"github.com/KylinYZ/open-rfc-go/cmd/orfctool"
+	"github.com/KylinYZ/open-rfc-go/rfc"
 )
 
 // `orfc session` is the pinned-conversation primitive on the command line. Most

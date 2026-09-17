@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/client"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/pool"
+	"github.com/KylinYZ/open-rfc-go/internal/client"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/pool"
 )
 
 type fakeSession struct {

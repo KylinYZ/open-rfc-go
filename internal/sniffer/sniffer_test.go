@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/oisee/open-rfc-go/internal/ni"
+	"github.com/KylinYZ/open-rfc-go/internal/ni"
 )
 
 func readFrame(t *testing.T, r io.Reader) []byte {

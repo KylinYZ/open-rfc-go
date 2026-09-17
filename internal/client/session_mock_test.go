@@ -14,9 +14,9 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/oisee/open-rfc-go/internal/appc"
-	"github.com/oisee/open-rfc-go/internal/cpic"
-	"github.com/oisee/open-rfc-go/internal/gateway"
+	"github.com/KylinYZ/open-rfc-go/internal/appc"
+	"github.com/KylinYZ/open-rfc-go/internal/cpic"
+	"github.com/KylinYZ/open-rfc-go/internal/gateway"
 )
 
 type mockTransport struct {

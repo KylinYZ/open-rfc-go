@@ -2,7 +2,7 @@
 
 package rfcserver
 
-import "github.com/oisee/open-rfc-go/internal/metadata"
+import "github.com/KylinYZ/open-rfc-go/internal/metadata"
 
 // The type graph of SADT_REST_RFC_ENDPOINT, which is how ADT travels over RFC.
 //

@@ -16,7 +16,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/oisee/open-rfc-go/rfc"
+	"github.com/KylinYZ/open-rfc-go/rfc"
 )
 
 // System is one named destination plus its tool policy, as stored in .rfc.json.
