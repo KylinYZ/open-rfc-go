@@ -10,6 +10,14 @@ A pure-Go, **SDK-free** implementation of SAP classic synchronous RFC — client
 **and** server. No NW RFC SDK, no native library, no cgo. A Go port of
 [`open-rfc`](https://github.com/marianfoo/open-rfc).
 
+> **Fork status — Kylin secondary development.**
+> This is KylinYZ's secondary-development fork of [`oisee/open-rfc-go`](https://github.com/oisee/open-rfc-go).
+> The maintained branch is `kylin-dev`; the upstream-compatible fix branch is `fix/rfc-language-key`.
+> The fork:
+> - renames the Go module to `github.com/KylinYZ/open-rfc-go`;
+> - normalizes ISO logon languages to SAP internal language keys, including numeric keys such as `ZH -> 1`, `KO -> 3`, and `TH -> 2`;
+> - accepts those numeric keys in the CPIC logon encoder and stops `cmd/orfctool` from truncating the configured language to a single ASCII letter.
+
 *(That frame above is real: an `INT4` parameter carrying 21, as the fast
 serializer writes it. We took it off the wire — see
 [serializer selection](docs/discoveries/serializer-selection.md).)*
